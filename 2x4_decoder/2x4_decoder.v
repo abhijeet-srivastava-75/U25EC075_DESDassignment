@@ -13,6 +13,29 @@ module decoder_2x4_behavioral (
         endcase
     end
 
+    /*
+we can also write the behavoiral using the if else also if we have to write then write 
+
+
+module decoder_2x4_behavioral (
+    input  wire [1:0] A,
+    output reg  [3:0] Y
+);
+  
+    always @(*) begin 
+        if (A == 2'b00) begin
+            Y = 4'b0001;
+        end else if (A == 2'b01) begin 
+            Y = 4'b0010;
+        end else if (A == 2'b10) begin 
+            Y = 4'b0100;
+        end else begin
+            Y = 4'b1000; // Catches 2'b11
+        end
+    end 
+endmodule
+*/
+
 endmodule
 
 module decoder_2x4_dataflow (
